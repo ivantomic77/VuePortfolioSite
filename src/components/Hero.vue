@@ -4,15 +4,13 @@ export default {
         return {
             typeValue: "",
             typeStatus: false,
-            displayTextArray: [
-                JSON.stringify(
-                    JSON.parse(
-                        `{"fullName": "Ivan Tomić","location": "Croatia","techStack": ["Angular","Spring Boot","PostgreSQL","Tailwind CSS"]}`
-                    ),
-                    null,
-                    4
+            displayText: JSON.stringify(
+                JSON.parse(
+                    `{"fullName": "Ivan Tomić","location": "Croatia","techStack": ["Angular","Spring Boot","PostgreSQL","Tailwind CSS"]}`
                 ),
-            ],
+                null,
+                4
+            ),
             typingSpeed: 20,
             erasingSpeed: 100,
             newTextDelay: 2000,
@@ -25,14 +23,9 @@ export default {
     },
     methods: {
         typeText() {
-            if (
-                this.charIndex <
-                this.displayTextArray[this.displayTextArrayIndex].length
-            ) {
+            if (this.charIndex < this.displayText.length) {
                 if (!this.typeStatus) this.typeStatus = true;
-                this.typeValue += this.displayTextArray[
-                    this.displayTextArrayIndex
-                ].charAt(this.charIndex);
+                this.typeValue += this.displayText.charAt(this.charIndex);
                 this.charIndex += 1;
                 setTimeout(this.typeText, this.typingSpeed);
             } else {
