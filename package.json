@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@iconify-prerendered/vue-entypo-social": "^0.22.1656181793",
+        "gsap": "^3.11.5",
         "vue": "^3.2.47"
     },
     "devDependencies": {
