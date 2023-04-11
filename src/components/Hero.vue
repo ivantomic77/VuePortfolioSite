@@ -1,36 +1,42 @@
 <script lang="ts">
 export default {
-    data: () => {
+    data() {
         return {
             typeValue: "",
             typeStatus: false,
-            displayText: JSON.stringify(
-                JSON.parse(
-                    `{"fullName": "Ivan Tomić","location": "Croatia","techStack": ["Angular","Spring Boot","PostgreSQL","Tailwind CSS"]}`
-                ),
-                null,
-                4
-            ),
+            displayText: {
+                fullName: "Ivan Tomić",
+                location: "Croatia",
+                techStack: [
+                    "Angular",
+                    "Spring Boot",
+                    "PostgreSQL",
+                    "Tailwind CSS",
+                ],
+            },
             typingSpeed: 20,
-            erasingSpeed: 100,
-            newTextDelay: 2000,
-            displayTextArrayIndex: 0,
             charIndex: 0,
         };
     },
-    created() {
-        setTimeout(this.typeText, this.newTextDelay + 200);
+    mounted() {
+        this.typeText();
     },
     methods: {
         typeText() {
-            if (this.charIndex < this.displayText.length) {
+            if (
+                this.charIndex <
+                JSON.stringify(this.displayText, null, 4).length
+            ) {
                 if (!this.typeStatus) this.typeStatus = true;
-                this.typeValue += this.displayText.charAt(this.charIndex);
+                this.typeValue += JSON.stringify(
+                    this.displayText,
+                    null,
+                    4
+                ).charAt(this.charIndex);
                 this.charIndex += 1;
-                setTimeout(this.typeText, this.typingSpeed);
+                requestAnimationFrame(this.typeText);
             } else {
                 this.typeStatus = false;
-                setTimeout(this.typeText, this.newTextDelay);
             }
         },
     },
