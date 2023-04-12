@@ -40,23 +40,21 @@ export default {
 
 <template>
     <div
-        class="flex justify-around items-center sm:mt-40 mt-32 sm:flex-row flex-col sm:gap-0 gap-10"
-    >
+        class="flex justify-around items-center sm:mt-40 mt-32 sm:flex-row flex-col sm:gap-0 gap-10">
         <div>
-            <h1 class="text-5xl font-semibold leading-12">Hi, I am</h1>
-            <h1 class="text-5xl font-bold">Ivan Tomić</h1>
+            <h1 class="text-5xl sm:text-6xl font-semibold leading-12">
+                Hi, I am
+            </h1>
+            <h1 class="text-5xl sm:text-6xl font-bold">Ivan Tomić</h1>
             <h2 class="text-2xl">Software Developer</h2>
         </div>
         <div
-            class="h-80 w-80 bg-black rounded-lg p-4 flex flex-col justify-center"
-        >
+            class="h-80 w-80 bg-black rounded-lg p-4 flex flex-col justify-center">
             <div class="flex justify-end gap-2">
                 <div
-                    class="h-3 w-3 bg-green rounded-full hover:bg-opacity-80"
-                />
+                    class="h-3 w-3 bg-green rounded-full hover:bg-opacity-80" />
                 <div
-                    class="h-3 w-3 bg-orange rounded-full hover:bg-opacity-80"
-                />
+                    class="h-3 w-3 bg-orange rounded-full hover:bg-opacity-80" />
                 <div class="h-3 w-3 bg-red rounded-full hover:bg-opacity-80" />
             </div>
             <div class="h-full flex items-center">

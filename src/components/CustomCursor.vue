@@ -3,12 +3,10 @@
         <div class="custom-cursor">
             <div
                 id="cursor-big"
-                class="custom-cursor__ball custom-cursor__ball--big"
-            ></div>
+                class="custom-cursor__ball custom-cursor__ball--big"></div>
             <div
                 id="cursor-small"
-                class="custom-cursor__ball custom-cursor__ball--small"
-            ></div>
+                class="custom-cursor__ball custom-cursor__ball--small"></div>
         </div>
     </div>
 </template>
