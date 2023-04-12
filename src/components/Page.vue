@@ -2,11 +2,13 @@
 import HeaderComponent from "./HeaderComponent.vue";
 import Hero from "./Hero.vue";
 import TechStack from "./TechStack.vue";
+import Footer from "./Footer.vue";
 export default {
     components: {
         HeaderComponent,
         Hero,
         TechStack,
+        Footer,
     },
 };
 </script>
@@ -17,5 +19,6 @@ export default {
         <header-component />
         <hero />
         <tech-stack />
+        <Footer />
     </div>
 </template>
