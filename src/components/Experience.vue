@@ -17,7 +17,7 @@ export default {
                     role: "Backend Developer",
                     url: "https://www.og-cs.hr",
                     period: "Jul 2023 - Present",
-                    description: "I collaborate with clients to create innovative solutions, primarily focusing on Spring Boot while continuously expanding my tech horizons."
+                    description: "I collaborate with clients to create innovative solutions, primarily focusing on Spring Boot while continuously expanding my tech horizons"
                 }
             ],
             colorCache: {}
