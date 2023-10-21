@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  portfolio-website:
+    build: .
+    image: portfolio-website
+    ports:
+      - "9191:91"
+    networks:
+      - nginxproxymanager_default
+    container_name: portfolio-website
+    restart: always
+
+networks:
+  nginxproxymanager_default:
+    external:
+      name: nginxproxymanager_default
