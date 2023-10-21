@@ -3,12 +3,14 @@ import HeaderComponent from "./HeaderComponent.vue";
 import Hero from "./Hero.vue";
 import TechStack from "./TechStack.vue";
 import Footer from "./Footer.vue";
+import Experience from "./Experience.vue";
 export default {
     components: {
         HeaderComponent,
         Hero,
         TechStack,
         Footer,
+        Experience
     },
 };
 </script>
@@ -19,6 +21,7 @@ export default {
         <header-component />
         <hero />
         <tech-stack />
+        <Experience />
         <Footer />
     </div>
 </template>

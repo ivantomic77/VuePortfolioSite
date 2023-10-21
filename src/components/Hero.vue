@@ -7,7 +7,7 @@ export default {
             displayText: {
                 fullName: "Ivan Tomić",
                 location: "Croatia",
-                techStack: ["Angular", "Spring Boot", "Tailwind CSS"],
+                techStack: ["Java", "Spring Boot", "Docker", "Databases"],
             },
             typingSpeed: 20,
             charIndex: 0,
@@ -40,7 +40,7 @@ export default {
 
 <template>
     <div
-        class="flex justify-around items-center sm:mt-40 mt-32 sm:flex-row flex-col sm:gap-0 gap-10">
+        class="flex justify-around items-center sm:mt-40 mt-32 lg:flex-row flex-col lg:gap-0 gap-10">
         <div>
             <h1 class="text-5xl sm:text-6xl font-semibold leading-12">
                 Hi, I am
