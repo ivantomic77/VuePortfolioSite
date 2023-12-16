@@ -44,7 +44,7 @@ export default {
         </div>
         <div class="flex justify-center items-center flex-col gap-1 mt-20">
             <div class="w-80 h-2 bg-black"></div>
-            <h1>&copy; {{ year }} itomic.tech</h1>
+            <h1>&copy; {{ year }} tomic.dev</h1>
         </div>
     </div>
 </template>
