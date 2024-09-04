@@ -18,16 +18,24 @@ export default {
                         icon: "logos:quarkus-icon"
                     },
                     {
+                        name: "PostgreSQL",
+                        icon: "skill-icons:postgresql-dark"
+                    },
+                    {
+                        name: "Redis",
+                        icon: "logos:redis",
+                    },
+                    {
+                        name: "GitLab CI",
+                        icon: "skill-icons:gitlab-dark"
+                    },
+                    {
                         name: "Tailwind",
                         icon: "skill-icons:tailwindcss-dark",
                     },
                     {
-                        name: "Angular",
-                        icon: "skill-icons:angular-dark",
-                    },
-                    {
-                        name: "SvelteKit",
-                        icon: "skill-icons:svelte"
+                        name: "React",
+                        icon: "skill-icons:react-dark",
                     },
                     {
                         name: "Vue",
@@ -50,10 +58,6 @@ export default {
                         icon: "skill-icons:git",
                     },
                     {
-                        name: "Python",
-                        icon: "skill-icons:python-dark",
-                    },
-                    {
                         name: "Postman",
                         icon: "skill-icons:postman",
                     },
@@ -73,10 +77,6 @@ export default {
                         name: "Arduino",
                         icon: "skill-icons:arduino",
                     },
-                    {
-                        name: "OpenAI",
-                        icon: "logos:openai-icon",
-                    },
                 ],
         };
     },
@@ -94,15 +94,15 @@ export default {
 
         <div
             class="mt-10">
-            <div class="flex flex-wrap sm:gap-8 gap-8">
+            <div class="flex flex-wrap sm:gap-10 gap-10">
                 <span
                     v-for="technology in tech"
                     :key="technology.name"
-                    class="flex flex-col items-center w-[40px]">
+                    class="flex flex-col items-center w-[45px]">
                     <Icon
                         :icon="technology.icon"
-                        class="sm:text-5xl text-4xl" />
-                    <h1 class="text-sm">{{ technology.name }}</h1>
+                        class="sm:text-6xl text-5xl" />
+                    <h1 class="text-sm whitespace-nowrap">{{ technology.name }}</h1>
                 </span>
             </div>
         </div>

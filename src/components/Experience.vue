@@ -9,7 +9,7 @@ export default {
                     role: "Software Developer",
                     url: "https://www.og-cs.hr",
                     period: "Jul 2022 - Aug 2022",
-                    description: "As a high school intern, I gained skills in full-stack development with Spring Boot and Angular and explored Docker containerization"
+                    description: "As a high school intern, I gained skills in full-stack development using Spring Boot, Angular and Docker containerization"
                 },
                 {
                     companyName: "OG Consultancy Services",
@@ -17,7 +17,7 @@ export default {
                     role: "Backend Developer",
                     url: "https://www.og-cs.hr",
                     period: "Jul 2023 - Present",
-                    description: "I collaborate with clients to create innovative solutions, primarily focusing on Spring Boot while continuously expanding my tech horizons"
+                    description: "I collaborate with clients to create innovative solutions, primarily focusing on Spring Boot while continuously to expanding my tech horizons"
                 }
             ],
             colorCache: {}
