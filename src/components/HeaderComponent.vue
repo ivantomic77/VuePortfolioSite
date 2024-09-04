@@ -5,7 +5,6 @@ import {
 } from "@iconify-prerendered/vue-entypo-social";
 import { inject } from "vue";
 
-
 const saEvent = inject<any>("saEvent");
 
 const visitGithub = () => {
