@@ -95,7 +95,7 @@ export default {
         <div
             class="mt-10">
             <div class="flex flex-wrap sm:gap-8 gap-8">
-                <a
+                <span
                     v-for="technology in tech"
                     :key="technology.name"
                     class="flex flex-col items-center w-[40px]">
@@ -103,7 +103,7 @@ export default {
                         :icon="technology.icon"
                         class="sm:text-5xl text-4xl" />
                     <h1 class="text-sm">{{ technology.name }}</h1>
-                </a>
+                </span>
             </div>
         </div>
     </section>

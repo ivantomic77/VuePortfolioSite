@@ -45,8 +45,8 @@ export default {
             <h1 class="text-5xl sm:text-6xl font-semibold leading-12">
                 Hi, I am
             </h1>
-            <h1 class="text-5xl sm:text-6xl font-bold">Ivan Tomić</h1>
-            <h2 class="text-2xl">Software Developer</h2>
+            <h2 class="text-5xl sm:text-6xl font-bold">Ivan Tomić</h2>
+            <h3 class="text-2xl">Software Developer</h3>
         </div>
         <div
             class="h-80 w-80 bg-black rounded-lg p-4 flex flex-col justify-center">
@@ -57,10 +57,9 @@ export default {
                     class="h-3 w-3 bg-orange rounded-full hover:bg-opacity-80" />
                 <div class="h-3 w-3 bg-red rounded-full hover:bg-opacity-80" />
             </div>
-            <div class="h-full flex items-center">
-                <div>
-                    <pre class="text-white inline">{{ typeValue }}</pre>
-                    <p class="blinking-cursor text-white inline">|</p>
+            <div class="h-full w-full flex justify-center items-center">
+                <div class="h-full w-full flex items-center">
+                    <pre class="text-white inline">{{ typeValue }}<p class="blinking-cursor text-white inline">|</p></pre>
                 </div>
             </div>
         </div>

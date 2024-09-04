@@ -28,16 +28,12 @@ export default {
     <div class="flex justify-center items-center flex-col gap-10 mt-40">
         <h1 class="font-bold text-4xl">Contact me</h1>
         <div class="flex flex-col gap-3">
-            <a
-                href="mailto: ivan.tomic2108@gmail.com"
-                class="font-semibold text-2xl"
-                >ivan.tomic2108@gmail.com</a
-            >
+            <img  class="w-80" alt="Email address" src="../assets/email.png" width="320px" height="48px" />
             <div class="flex justify-center items-center gap-2">
-                <a href="https://www.linkedin.com/in/itomic7/" target="_blank"
+                <a href="https://www.linkedin.com/in/itomic7/" aria-label="Visit my LinkedIn page." target="_blank"
                     ><IconLinkedinWithCircle class="h-9 w-9 hover:animate-spin"
                 /></a>
-                <a href="https://github.com/ivantomic77" target="_blank"
+                <a href="https://github.com/ivantomic77" aria-label="Visit my Github page." target="_blank"
                     ><IconGithubWithCircle class="h-9 w-9 hover:animate-spin"
                 /></a>
             </div>
