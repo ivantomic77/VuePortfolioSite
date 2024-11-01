@@ -4,4 +4,4 @@ import App from "./App.vue";
 
 import "./assets/main.css";
 
-createApp(App).use(SimpleAnalytics, {skip: false}).mount("#app");
+createApp(App).use(SimpleAnalytics, {skip: import.meta.env.NODE_ENV !== "production"}).mount("#app");
