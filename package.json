@@ -22,7 +22,8 @@
         "simple-analytics-vue": "^3.0.2",
         "tailwindcss": "^3.3.1",
         "typescript": "~5.0.4",
-        "vue": "^3.2.47"
+        "vue": "^3.2.47",
+        "vue-router": "^4.0.13"
     },
     "devDependencies": {
         "npm-run-all": "^4.1.5",

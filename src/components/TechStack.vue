@@ -88,7 +88,7 @@ export default {
 </script>
 
 <template>
-    <section class="sm:mt-60 mt-28 md:mx-16 mx-6">
+    <section class="md:mx-16 mx-6">
         <h1 class="text-4xl font-semibold">Technologies I've used...</h1>
         <h2 class="text-xl mb-14">(going beyond main tech stack)</h2>
 

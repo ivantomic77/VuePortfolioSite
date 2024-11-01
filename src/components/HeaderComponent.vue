@@ -7,7 +7,9 @@ import {
 
 <template>
     <div class="flex justify-between">
-        <a href="#" aria-label="Go to the top."><img alt="Ivan Tomic logo" src="../assets/logo.png" class="h-12 w-12" /></a>
+        <router-link to="/" aria-label="Go to the Homepage.">
+            <img alt="Ivan Tomic logo" src="../assets/logo.png" class="h-12 w-12" />
+        </router-link>
         <div class="flex gap-2">
             <a href="https://www.linkedin.com/in/itomic7/" aria-label="Visit my LinkedIn page." target="_blank"
                 ><IconLinkedinWithCircle class="h-9 w-9 hover:animate-spin"

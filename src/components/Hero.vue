@@ -40,7 +40,7 @@ export default {
 
 <template>
     <div
-        class="flex justify-around items-center sm:mt-40 mt-32 lg:flex-row flex-col lg:gap-0 gap-10">
+        class="flex justify-around items-center mt-24 lg:flex-row flex-col lg:gap-0 gap-10">
         <div>
             <h1 class="text-5xl sm:text-6xl font-semibold leading-12">
                 Hi, I am

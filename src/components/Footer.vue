@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex justify-center items-center flex-col gap-10 mt-40">
+    <div class="flex justify-center items-center flex-col gap-8">
         <h1 class="font-bold text-4xl">Contact me</h1>
         <div class="flex flex-col gap-3">
             <img  class="w-80" alt="Email address" src="../assets/email.png" width="320px" height="48px" />
@@ -30,7 +30,7 @@ onMounted(() => {
                 /></a>
             </div>
         </div>
-        <div class="flex justify-center items-center flex-col gap-1 mt-20">
+        <div class="flex justify-center items-center flex-col gap-1 mt-2">
             <div class="w-80 h-2 bg-black"></div>
             <h1>&copy; {{ year }} tomic.dev</h1>
         </div>
