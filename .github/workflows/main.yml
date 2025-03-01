@@ -7,6 +7,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@main
+
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}
+      
+      - name: 'Build Website Image'
+        run: |
+          docker build . --tag ghcr.io/ivantomic77/portfolio-website:latest
+          docker push ghcr.io/ivantomic77/portfolio-website:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
 
     steps:       
     - name: Deploy using ssh
