@@ -1,13 +1,11 @@
 name: Deploy
- 
+
 on:
   push:
-    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ always() }}
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@main
@@ -16,9 +14,9 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{github.actor}}
-          password: ${{secrets.GITHUB_TOKEN}}
-      
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: 'Build Website Image'
         run: |
           docker build . --tag ghcr.io/ivantomic77/portfolio-website:latest
@@ -27,6 +25,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    if: github.ref == 'refs/heads/master'
 
     steps:       
     - name: Deploy using ssh
