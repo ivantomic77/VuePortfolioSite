@@ -1,10 +1,11 @@
-FROM nginx:alpine3.21
+FROM public.ecr.aws/nginx/nginx:stable-alpine3.19
 
-RUN mkdir -p /app
+RUN apk update && \
+    apk upgrade --no-cache
 
-COPY ./dist /app
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-CMD ["nginx", "-g", "daemon off;"]
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./dist /usr/share/nginx/html
 
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
