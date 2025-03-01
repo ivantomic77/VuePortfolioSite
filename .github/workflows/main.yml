@@ -6,30 +6,59 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Vue Application
+        run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: vue-build
+          path: dist
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
     permissions:
       contents: read
       packages: write
     steps:
-      - name: 'Checkout GitHub Action'
-        uses: actions/checkout@main
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: 'Login to GitHub Container Registry'
-        uses: docker/login-action@v1
+      - name: Download Vue Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: vue-build
+          path: dist
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Build Website Image'
+      - name: Build and Push Docker Image
         run: |
           docker build . --tag ghcr.io/ivantomic77/portfolio-website:latest
           docker push ghcr.io/ivantomic77/portfolio-website:latest
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: publish
     if: github.ref == 'refs/heads/master'
-
     steps:       
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
