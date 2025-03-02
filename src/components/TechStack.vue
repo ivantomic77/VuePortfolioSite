@@ -50,6 +50,10 @@ export default {
                         icon: "logos:linode",
                     },
                     {
+                        name: "Kubernetes",
+                        icon: "skill-icons:kubernetes",
+                    },
+                    {
                         name: "Docker",
                         icon: "skill-icons:docker",
                     },
