@@ -90,6 +90,16 @@ jobs:
         run: |
           echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
           echo "KUBECONFIG=$(pwd)/kubeconfig.yaml" >> $GITHUB_ENV
+      
+      - name: Check for infra changes
+        id: check_infra_changes
+        run: |
+          git diff --exit-code ./infra || echo "infra changed"
+  
+      - name: Apply infra changes
+        if: steps.check_infra_changes.outputs.changed == 'infra changed'
+        run: |
+          kubectl apply -f ./infra
 
       - name: Rollout new version
         run: kubectl rollout restart -f ./infra/portfolio-ui-deployment.yaml
