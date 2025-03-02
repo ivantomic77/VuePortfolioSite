@@ -92,4 +92,4 @@ jobs:
           export KUBECONFIG=$(pwd)/kubeconfig.yaml
 
       - name: Check cluster nodes
-        run: kubectl get nodes
+        run: kubectl config view
