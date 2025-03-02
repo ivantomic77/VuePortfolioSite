@@ -89,7 +89,7 @@ jobs:
       - name: Set up kubeconfig
         run: |
           echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
-          export KUBECONFIG=$(pwd)/kubeconfig.yaml
+          echo "KUBECONFIG=$(pwd)/kubeconfig.yaml" >> $GITHUB_ENV
 
       - name: Check cluster nodes
-        run: kubectl config view
+        run: kubectl get nodes
