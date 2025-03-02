@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: portfolio-ui-ingress
+  name: portfolio-ui-ingress
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  rules:
+    - host: www.tomic.dev
+      http:
+        paths:
+        - backend:
+            service:
+              name: portfolio-ui-service
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
+    - host: tomic.dev
+      http:
+        paths:
+        - backend:
+            service:
+              name: portfolio-ui-service
+              port:
+                number: 80
+          path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+      - www.tomic.dev
+      - tomic.dev
+      secretName: letsencrypt-prod
