@@ -7,7 +7,7 @@ export default {
             displayText: {
                 fullName: "Ivan Tomić",
                 location: "Croatia",
-                techStack: ["Java", "Spring Boot", "Docker", "Databases"],
+                techStack: ["Java", "Spring Boot", "Docker", "PostgreSQL"],
             },
             typingSpeed: 20,
             charIndex: 0,
@@ -39,22 +39,20 @@ export default {
 </script>
 
 <template>
-    <div
+    <section
         class="flex justify-around items-center sm:mt-40 mt-32 lg:flex-row flex-col lg:gap-0 gap-10">
         <div>
-            <h1 class="text-5xl sm:text-6xl font-semibold leading-12">
-                Hi, I am
+            <p class="text-5xl sm:text-6xl font-semibold leading-12">Hi, I am</p>
+            <h1 class="text-5xl sm:text-6xl font-bold leading-12">
+                Ivan Tomić
             </h1>
-            <h2 class="text-5xl sm:text-6xl font-bold">Ivan Tomić</h2>
-            <h3 class="text-2xl">Software Developer</h3>
+            <p class="text-2xl">Software Developer</p>
         </div>
         <div
             class="h-80 w-80 bg-black rounded-lg p-4 flex flex-col justify-center">
             <div class="flex justify-end gap-2">
-                <div
-                    class="h-3 w-3 bg-green rounded-full hover:bg-opacity-80" />
-                <div
-                    class="h-3 w-3 bg-orange rounded-full hover:bg-opacity-80" />
+                <div class="h-3 w-3 bg-green rounded-full hover:bg-opacity-80" />
+                <div class="h-3 w-3 bg-orange rounded-full hover:bg-opacity-80" />
                 <div class="h-3 w-3 bg-red rounded-full hover:bg-opacity-80" />
             </div>
             <div class="h-full w-full flex justify-center items-center">
@@ -63,7 +61,7 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style>
