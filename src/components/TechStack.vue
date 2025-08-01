@@ -97,7 +97,7 @@ export default {
         <p class="text-xl mb-14">(going beyond main tech stack)</p>
 
         <div class="mt-10">
-            <div class="grid grid-cols-10 sm:gap-10 gap-10">
+            <div class="grid gap-10 grid-cols-[repeat(auto-fit,minmax(55px,1fr))]">
                 <span
                     v-for="technology in tech"
                     :key="technology.name"
