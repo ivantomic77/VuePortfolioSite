@@ -1,5 +1,6 @@
 version: '3.8'
 
+# DEPRECATED: This compose file was used for docker compose deployments
 services:
   portfolio-website:
     build: .
