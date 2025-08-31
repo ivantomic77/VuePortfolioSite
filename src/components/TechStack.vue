@@ -1,94 +1,29 @@
-<script lang="ts">
+<script setup lang="ts">
+import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 
-export default {
-    data() {
-        return {
-            tech: [
-                    {
-                        name: "Java",
-                        icon: "skill-icons:java-dark"
-                    },
-                    {
-                        name: "SpringBoot",
-                        icon: "skill-icons:spring-dark",
-                    },
-                    {
-                        name: "Quarkus",
-                        icon: "logos:quarkus-icon"
-                    },
-                    {
-                        name: "PostgreSQL",
-                        icon: "skill-icons:postgresql-dark"
-                    },
-                    {
-                        name: "Redis",
-                        icon: "logos:redis",
-                    },
-                    {
-                        name: "GitLab CI",
-                        icon: "skill-icons:gitlab-dark"
-                    },
-                    {
-                        name: "Tailwind",
-                        icon: "skill-icons:tailwindcss-dark",
-                    },
-                    {
-                        name: "React",
-                        icon: "skill-icons:react-dark",
-                    },
-                    {
-                        name: "Vue",
-                        icon: "skill-icons:vuejs-dark",
-                    },
-                    {
-                        name: "AWS",
-                        icon: "skill-icons:aws-dark",
-                    },
-                    {
-                        name: "Linode",
-                        icon: "logos:linode",
-                    },
-                    {
-                        name: "Docker",
-                        icon: "skill-icons:docker",
-                    },
-                    {
-                        name: "Kubernetes",
-                        icon: "skill-icons:kubernetes",
-                    },
-                    {
-                        name: "Git",
-                        icon: "skill-icons:git",
-                    },
-                    {
-                        name: "Postman",
-                        icon: "skill-icons:postman",
-                    },
-                    {
-                        name: "Figma",
-                        icon: "skill-icons:figma-dark",
-                    },
-                    {
-                        name: "Photoshop",
-                        icon: "skill-icons:photoshop",
-                    },
-                    {
-                        name: "Unity",
-                        icon: "skill-icons:unity-dark",
-                    },
-                    {
-                        name: "Arduino",
-                        icon: "skill-icons:arduino",
-                    },
-                ],
-        };
-    },
-
-    components: {
-        Icon,
-    },
-};
+const tech = [
+    { name: "Java", icon: "skill-icons:java-dark" },
+    { name: "SpringBoot", icon: "skill-icons:spring-dark" },
+    { name: "Quarkus", icon: "logos:quarkus-icon" },
+    { name: "Node.js", icon: "skill-icons:nodejs-dark" },
+    { name: "PostgreSQL", icon: "skill-icons:postgresql-dark" },
+    { name: "Redis", icon: "logos:redis" },
+    { name: "GitLab CI", icon: "skill-icons:gitlab-dark" },
+    { name: "Tailwind", icon: "skill-icons:tailwindcss-dark" },
+    { name: "React", icon: "skill-icons:react-dark" },
+    { name: "Vue", icon: "skill-icons:vuejs-dark" },
+    { name: "AWS", icon: "skill-icons:aws-dark" },
+    { name: "Linode", icon: "logos:linode" },
+    { name: "Kubernetes", icon: "skill-icons:kubernetes" },
+    { name: "Docker", icon: "skill-icons:docker" },
+    { name: "Git", icon: "skill-icons:git" },
+    { name: "Postman", icon: "skill-icons:postman" },
+    { name: "Figma", icon: "skill-icons:figma-dark" },
+    { name: "Photoshop", icon: "skill-icons:photoshop" },
+    { name: "Unity", icon: "skill-icons:unity-dark" },
+    { name: "Arduino", icon: "skill-icons:arduino" },
+];
 </script>
 
 <template>

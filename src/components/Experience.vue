@@ -1,41 +1,37 @@
-<script lang="ts">
-export default {
-    data() {
-        return {
-            experiences: [
-                {
-                    companyName: "OG Consultancy Services",
-                    employmentType: "Internship",
-                    role: "Software Developer",
-                    url: "https://www.og-cs.hr",
-                    period: "Jul 2022 - Aug 2022",
-                    description: "Worked on a full-stack web application using Spring Boot for backend APIs and Angular for the frontend. Learned how to containerize apps with Docker and got familiar with dev workflows."
-                },
-                {
-                    companyName: "OG Consultancy Services",
-                    employmentType: "Full time",
-                    role: "Backend Developer",
-                    url: "https://www.og-cs.hr",
-                    period: "Jul 2023 - Present",
-                    description: "I develop backend systems using Java and Spring Boot, design solutions, build REST APIs, and manage data with PostgreSQL and other databases. I work closely with frontend developers and DevOps team to automate testing and deployment. Since the projects vary, I’m always learning new tools and technologies as needed."
-                }
-            ],
-            colorCache: {}
-        }
-    },
-    methods: {
-        generateRandomColor() {
-            const letters = "0123456789ABCDEF";
-            let color = "#";
+<script setup lang="ts">
+import { ref } from "vue"
+import { Icon } from "@iconify/vue";
+import { generateRandomColor } from "../helpers/ColorHelpers"
 
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-
-            return color;
-        }
-    }
+interface Experience {
+  companyName: string
+  employmentType: string
+  role: string
+  url: string
+  period: string
+  description: string
 }
+
+const experiences = ref<Experience[]>([
+  {
+    companyName: "OG Consultancy Services",
+    employmentType: "Internship",
+    role: "Software Developer",
+    url: "https://www.og-cs.hr",
+    period: "Jul 2022 - Aug 2022",
+    description:
+      "During my internship, I learned how to develop an entire application from backend to frontend and deploy it with Docker Compose."
+  },
+  {
+    companyName: "OG Consultancy Services",
+    employmentType: "Full time",
+    role: "Backend Developer",
+    url: "https://www.og-cs.hr",
+    period: "Jul 2023 - Present",
+    description:
+      "I focus on backend development and collaborate with other teams to deliver solutions, with occasional frontend work and involvement in PoCs for internal and client projects."
+  }
+])
 </script>
 
 <template>
@@ -58,11 +54,14 @@ export default {
                         </div>
                         <div class="mt-4">{{ experience.description }}</div>
                     </div>
-                    <a :href="experience.url"
-                        class="bg-black text-white p-2 rounded-b-lg flex justify-between pr-4 transition ease-in-out hover:bg-opacity-70"
-                        target="_blank">
-                        <span>Go to the site</span>
-                        <span class="font-bold">></span>
+                    <a :href="experience.url" class="bg-black text-white p-2 rounded-b-lg flex justify-between pr-4 transition ease-in-out hover:bg-opacity-70" target="_blank">
+                        <h2>Go to the site</h2>
+                        <Icon
+                            icon="ci:external-link"
+                            width="24" height="24"
+                            :style="{ color: '#fff' }"
+                            class="sm:text-6xl text-5xl"
+                        />
                     </a>
                 </div>
             </div>

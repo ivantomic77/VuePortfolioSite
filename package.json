@@ -10,6 +10,7 @@
         "type-check": "vue-tsc --noEmit"
     },
     "dependencies": {
+        "@iconify-prerendered/vue-ci": "^0.28.1722793086",
         "@iconify-prerendered/vue-entypo-social": "^0.22.1656181793",
         "@iconify/vue": "^4.1.1",
         "@types/node": "^18.15.11",
