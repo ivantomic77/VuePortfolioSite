@@ -95,8 +95,21 @@
     modalOpen.value = false;
     selectedProject.value = null;
   }
+
+  interface ProjectCard {
+    name: string,
+    description: string,
+    role: string,
+    technologies: string[],
+    linksToProject: {
+      displayName: string,
+      link: string
+    } [],
+    linkToArticle: string,
+    articleSections?: string[]
+  }
   
-  const projects = [
+  const projects: ProjectCard[] = [
     {
       name: "UsporediMe",
       description:
@@ -110,16 +123,7 @@
       linkToArticle:
         "https://www.linkedin.com/posts/itomic7_usporedimecom-usporedite-cijene-namirnica-activity-7331197636181397504-Gvtj",
     },
-    {
-      name: "Linode → Oracle Kubernetes Migration",
-      description:
-        "Migrated multiple personal services (websites, Node-RED, Uptime Kuma, and more) from a Linode server to a (free) k3s Kubernetes cluster on Oracle Cloud. This project helped me learn Kubernetes, container orchestration, and DevOps practices, enabling me to create and manage my own deployments.",
-      role: "DevOps Engineer, Cloud Enthusiast",
-      technologies: ["Kubernetes", "Docker", "Oracle Cloud", "CI/CD"],
-      articleSections: [
-        // tbd
-      ]
-    }
+
   ];
 </script>
   
