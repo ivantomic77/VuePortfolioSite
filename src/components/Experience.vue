@@ -9,10 +9,27 @@ interface Experience {
   role: string
   url: string
   period: string
-  description: string
+  description?: string
 }
 
 const experiences = ref<Experience[]>([
+  {
+    companyName: "Infobip",
+    employmentType: "Full time",
+    role: "Software Engineer",
+    url: "https://www.infobip.com/",
+    period: "April 2026 - Present",
+    description: "I work on both the frontend and backend of communication systems."
+  },
+  {
+    companyName: "OG Consultancy Services",
+    employmentType: "Full time",
+    role: "Backend Developer",
+    url: "https://www.og-cs.hr",
+    period: "Jul 2023 - March 2026",
+    description:
+      "I focused on backend development and collaborate with other teams to deliver solutions, with occasional frontend work and involvement in PoCs for internal and client projects."
+  },
   {
     companyName: "OG Consultancy Services",
     employmentType: "Internship",
@@ -21,15 +38,6 @@ const experiences = ref<Experience[]>([
     period: "Jul 2022 - Aug 2022",
     description:
       "During my internship, I learned how to develop an entire application from backend to frontend and deploy it with Docker Compose."
-  },
-  {
-    companyName: "OG Consultancy Services",
-    employmentType: "Full time",
-    role: "Backend Developer",
-    url: "https://www.og-cs.hr",
-    period: "Jul 2023 - Present",
-    description:
-      "I focus on backend development and collaborate with other teams to deliver solutions, with occasional frontend work and involvement in PoCs for internal and client projects."
   }
 ])
 </script>
@@ -52,7 +60,7 @@ const experiences = ref<Experience[]>([
                             <span>&#8226;</span>
                             <p>{{ experience.role }}</p>
                         </div>
-                        <div class="mt-4">{{ experience.description }}</div>
+                        <div class="mt-4" v-if="experience.description">{{ experience.description }}</div>
                     </div>
                     <a :href="experience.url" class="bg-black text-white p-2 rounded-b-lg flex justify-between pr-4 transition ease-in-out hover:bg-opacity-70" target="_blank">
                         <h2>Go to the site</h2>
