@@ -24,7 +24,7 @@ spec:
           resources:
             limits:
               memory: 50M
-              cpu: 1
+              cpu: 250m
           name: portfolio-ui
           readinessProbe:
             httpGet:
