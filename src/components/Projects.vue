@@ -115,7 +115,7 @@
       description:
         "UsporediMe was developed together with two colleagues and uses daily online supermarket price lists in Croatia to help users compare prices and find the lowest-cost options quickly.",
       role: "Backend Developer, DevOps",
-      technologies: ["Spring Boot", "PostgreSQL", "Docker Swarm"],
+      technologies: ["Spring Boot", "PostgreSQL", "Kubernetes"],
       linksToProject: [
         { displayName: "Play Store", link: "https://play.google.com/store/apps/details?id=com.kgt.usporedime" },
         { displayName: "Website", link: "https://www.usporedime.com/" },
