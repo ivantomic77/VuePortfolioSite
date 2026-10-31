@@ -36,7 +36,7 @@ onMounted(() => {
             <div class="text-xs text-center mt-2 opacity-75 hover:opacity-100 transition-opacity">
                 <a
                     class="sa-credit"
-                    href="https://www.simpleanalytics.com?utm_source=tomic.com&utm_content=badge"
+                    href="https://www.simpleanalytics.com?utm_source=tomic.dev&utm_content=badge"
                     referrerpolicy="origin"
                     target="_blank"
                     aria-label="100% privacy-first analytics by Simple Analytics"
